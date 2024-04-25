@@ -50,7 +50,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 left-0 right-0 w-full bg-blue-950">
+    <header className="sticky top-0 left-0 right-0 z-10 w-full bg-white shadow-md shadow-purple-700">
       <nav
         className="flex items-center justify-between px-5 py-2 mx-auto"
         aria-label="Global">
@@ -68,7 +68,7 @@ export default function Navbar() {
               <Link
                 href={item.href}
                 key={item.id}
-                className="text-sm font-semibold leading-6 text-gray-300">
+                className="text-sm font-semibold leading-6 text-[#251540]">
                 {item.title}
               </Link>
             ))}
@@ -77,7 +77,7 @@ export default function Navbar() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-slate-200"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-slate-800"
             onClick={() => setMobileMenuOpen(true)}>
             <span className="sr-only">Open main menu</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -86,7 +86,7 @@ export default function Navbar() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
             href="#"
-            className="text-sm font-semibold leading-6 text-gray-300 bg-blue-500 rounded-md px-6 py-3">
+            className="text-sm font-semibold leading-6 text-gray-100 bg-blue-700 rounded-md px-6 py-3">
             Log In <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
@@ -96,7 +96,7 @@ export default function Navbar() {
         className="lg:hidden"
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}>
-        <div className="fixed inset-0 z-10" />
+        <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-blue-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="#" className="-m-1.5 p-1.5">
@@ -130,7 +130,7 @@ export default function Navbar() {
               <div className="flex items-center justify-center py-6">
                 <Link
                   href="#"
-                  className="bg-blue-500 px-6 py-2.5 rounded-md text-base font-semibold leading-7 text-gray-300 hover:bg-gray-50">
+                  className="bg-blue-800 px-6 py-2.5 rounded-md text-base font-semibold leading-7 text-gray-200 hover:bg-gray-50">
                   Log In
                 </Link>
               </div>
