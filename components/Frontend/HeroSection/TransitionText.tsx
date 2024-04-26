@@ -36,7 +36,7 @@ const TransitionText = () => {
   }, []);
 
   return (
-    <span className="-z-20">
+    <span>
       <TextTransition springConfig={presets.wobbly}>
         {TEXTS[index % TEXTS.length]}
       </TextTransition>

@@ -8,15 +8,16 @@ import TransitionText from "./TransitionText";
 
 const HeroSection = () => {
   return (
-    <section className="bg-blue-950 dark:bg-gray-900 ">
+    <section className="bg-blue-950 dark:bg-gray-900">
       <div className="container mx-auto grid px-5 py-8 lg:gap-8 xl:gap-0 lg:grid-cols-12">
         <div className="mr-auto space-y-8 place-self-center lg:col-span-7">
-          <h1 className="max-w-3xl text-white flex flex-wrap items-center space-y-5 font-serif text-3xl font-extrabold tracking-normal leading-none md:text-4xl xl:text-5xl dark:text-white">
+          <h1 className="max-w-3xl text-white flex flex-wrap items-center font-serif text-3xl font-extrabold tracking-normal leading-tight lg:leading-snug md:text-4xl xl:text-5xl dark:text-white">
             Secure your
             <span className="text-blue-600 px-3">
               <TransitionText />
             </span>
-            and other sessions now! Book to reserve your spot
+            and other sessions now! <br />
+            Book to reserve your spot
           </h1>
           <p className="max-w-2xl text-[#F3C0C0] lg:mb-8 md:text-lg font-normal lg:text-xl dark:text-gray-400">
             Discover the convenience of expert Medical Guidance from the comfort

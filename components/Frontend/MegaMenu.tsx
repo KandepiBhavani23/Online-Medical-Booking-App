@@ -15,13 +15,13 @@ import { megaMenuItems } from "../../constants/megaMenuItems";
 
 export function MegaMenu() {
   return (
-    <NavigationMenu className="py-5 mx-auto z-[1]">
-      <NavigationMenuList className="flex flex-wrap ">
+    <NavigationMenu>
+      <NavigationMenuList className="flex flex-wrap">
         {megaMenuItems?.map((item) => (
           <NavigationMenuItem key={item.id}>
             <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                 {item.subItems.map((subItem) => (
                   <ListItem
                     key={subItem.id}
