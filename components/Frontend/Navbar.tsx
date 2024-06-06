@@ -54,7 +54,7 @@ export default function Navbar() {
       <nav
         className="flex items-center justify-between px-5 py-2 mx-auto"
         aria-label="Global">
-        <div className="flex lg:flex-1 lg:gap-8">
+        <div className="flex lg:gap-8">
           <Link href="#" className="-m-1.5 p-1.5">
             <Image
               src={websiteLogo}
@@ -122,7 +122,7 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     key={item.id}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-300 hover:bg-gray-50">
+                    className="-mx-3 block rounded-lg px-3 py-2 text-xs font-semibold leading-7 text-gray-300 hover:bg-gray-50">
                     {item.title}
                   </Link>
                 ))}
