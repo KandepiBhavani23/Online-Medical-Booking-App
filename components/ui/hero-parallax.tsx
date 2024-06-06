@@ -61,7 +61,7 @@ export const HeroParallax = ({
           "linear-gradient(-45deg, #ff9a9e, #fecfef, #fe9a8b, #ffdde1)",
       }}
       ref={ref}
-      className="h-[220vh] sm:h-[235vh] md:h-[270vh] lg:h-[300vh] pt-20 sm:pt-24 lg:pt-28 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
+      className="h-[220vh] sm:h-[235vh] md:h-[270vh] lg:h-[300vh] xl:h-[315vh] pt-20 sm:pt-24 lg:pt-28 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
       <Header />
       <motion.div
         style={{
@@ -147,7 +147,7 @@ export const ProductCard = ({
       <Image
         src={product.thumbnail}
         fill
-        className="object-cover object-left-top absolute h-[150px] w-[100px] sm:h-[200px] sm:w-[160px] md:h-[250px] md:w-[220px] lg:h-[320px] lg:w-[270px] xl:h-full xl:w-full inset-0"
+        className="object-fill object-left-top absolute h-[150px] w-[100px] sm:h-[200px] sm:w-[160px] md:h-[250px] md:w-[220px] lg:h-[320px] lg:w-[270px] xl:h-full xl:w-full inset-0"
         alt={product.title}
       />
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
