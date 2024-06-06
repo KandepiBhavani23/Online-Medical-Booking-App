@@ -61,7 +61,7 @@ export const HeroParallax = ({
           "linear-gradient(-45deg, #ff9a9e, #fecfef, #fe9a8b, #ffdde1)",
       }}
       ref={ref}
-      className="h-[220vh] sm:h-[235vh] md:h-[270vh] lg:h-[300vh] xl:h-[315vh] pt-20 sm:pt-24 lg:pt-28 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
+      className="min-h-[100svh] pt-20 sm:pt-24 lg:pt-28 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
       <Header />
       <motion.div
         style={{
