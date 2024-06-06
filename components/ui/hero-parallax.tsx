@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   motion,
   useScroll,
@@ -22,7 +22,16 @@ export const HeroParallax = ({
   const firstRow = products.slice(0, 5);
   const secondRow = products.slice(5, 10);
   const thirdRow = products.slice(10, 15);
-  const ref = React.useRef(null);
+
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [containerHeight, setContainerHeight] = useState(0);
+
+  useEffect(() => {
+    if (ref.current) {
+      setContainerHeight(ref.current.scrollHeight);
+    }
+  }, [products]);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -61,7 +70,7 @@ export const HeroParallax = ({
           "linear-gradient(-45deg, #ff9a9e, #fecfef, #fe9a8b, #ffdde1)",
       }}
       ref={ref}
-      className="min-h-[100svh] pt-20 sm:pt-24 lg:pt-28 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
+      className="pt-20 sm:pt-24 lg:pt-28 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
       <Header />
       <motion.div
         style={{
