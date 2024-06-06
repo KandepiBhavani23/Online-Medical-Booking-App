@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Online Medical Booking Application",
-  description: "Online Medical Booking Application",
+  title: "DocEase Medical Booking Application",
+  description: "DocEase Medical Booking Application",
 };
 
 export default function RootLayout({
