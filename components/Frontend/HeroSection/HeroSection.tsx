@@ -8,7 +8,12 @@ import TransitionText from "./TransitionText";
 
 const HeroSection = () => {
   return (
-    <section className="bg-blue-950 dark:bg-gray-900">
+    <section
+      style={{
+        background:
+          "linear-gradient(120deg, #070F2B, #1B1A55, #001F3F, #313E86)",
+      }}
+      className="bg-blue-950 dark:bg-gray-900">
       <div className="container mx-auto grid px-5 py-8 lg:gap-8 xl:gap-0 lg:grid-cols-12">
         <div className="mr-auto space-y-8 place-self-center lg:col-span-7">
           <h1 className="max-w-3xl text-white flex flex-wrap items-center font-serif text-3xl font-extrabold tracking-normal leading-tight lg:leading-snug md:text-4xl xl:text-5xl dark:text-white">
