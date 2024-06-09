@@ -155,8 +155,12 @@ export const ProductCard = ({
       className="group/product h-[150px] w-[200px] sm:h-[230px] sm:w-[250px] md:h-[280px] md:w-[300px] lg:h-[320px] lg:w-[420px] xl:w-[30rem] xl:h-96 relative flex-shrink-0">
       <Image
         src={product.thumbnail}
+        sizes="(max-width: 768px) 100vw, 
+               (max-width: 1200px) 50vw, 
+               33vw"
         fill
-        className="object-fill object-left-top absolute h-[150px] w-[100px] sm:h-[200px] sm:w-[160px] md:h-[250px] md:w-[220px] lg:h-[320px] lg:w-[270px] xl:h-full xl:w-full inset-0"
+        style={{ objectFit: "cover" }}
+        className="object-left-top absolute h-[150px] w-[100px] sm:h-[200px] sm:w-[160px] md:h-[250px] md:w-[220px] lg:h-[320px] lg:w-[270px] xl:h-full xl:w-full inset-0"
         alt={product.title}
       />
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>

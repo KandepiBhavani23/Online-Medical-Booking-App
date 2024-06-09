@@ -61,6 +61,8 @@ export default function Navbar() {
               alt="medical-app-logo"
               width={80}
               height={80}
+              priority
+              className="w-auto h-auto"
             />
           </Link>
           <Popover.Group className="hidden lg:flex lg:gap-x-6 items-center transition-all transform duration-1000">

@@ -1,5 +1,6 @@
 import React from "react";
 import TabItems from "./TabItems";
+import SectionHeading from "../SectionHeading";
 
 const DoctorsSpecialistsTabs = () => {
   return (
@@ -8,9 +9,7 @@ const DoctorsSpecialistsTabs = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div className="mb-5 text-start">
-              <h2 className="mb-3 text-2xl font-bold leading-[1.2] text-dark sm:text-3xl md:text-4xl">
-                Top-rated online doctors & specialists available now.
-              </h2>
+              <SectionHeading title="Top-rated online doctors & specialists available now." />
               <p className="text-base md:text-lg ">
                 Choose from thousands of providers at every day affordable
                 prices. Book online today.

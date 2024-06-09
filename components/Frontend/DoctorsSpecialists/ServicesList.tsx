@@ -15,7 +15,7 @@ interface ServicesListProps {
 
 const ServicesList: React.FC<ServicesListProps> = ({ content, className }) => {
   return (
-    <div className="grid xl:grid-cols-4 w-full sm:grid-cols-2 md:grid-cols-3 gap-4  grid-col-1">
+    <div className="grid xl:grid-cols-3 w-full sm:grid-cols-2 md:grid-cols-2 gap-4  grid-col-1">
       {content?.map(({ id, cardTitle, cardDescription, image }) => (
         <div
           key={id}
@@ -24,13 +24,15 @@ const ServicesList: React.FC<ServicesListProps> = ({ content, className }) => {
           }}
           className={`flex relative right-0 h-48 w-full border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700`}>
           <div className="py-5 px-2 relative w-[55%]">
-            <h6 className="mb-2 text-base font-bold tracking-tight text-gray-900 dark:text-white">
+            <h3 className="mb-2 text-base font-bold tracking-tight text-gray-900 dark:text-white">
               {cardTitle}
-            </h6>
+            </h3>
             <p className="mb-3 text-sm font-normal text-gray-700 dark:text-gray-400">
               {cardDescription}
             </p>
-            <button className="inline-flex absolute bottom-2 items-center p-1 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <button
+              aria-label="Visit to Services and Specialists"
+              className="inline-flex absolute bottom-2 items-center p-1 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
               <MoveRight />
             </button>
           </div>
@@ -40,6 +42,7 @@ const ServicesList: React.FC<ServicesListProps> = ({ content, className }) => {
               src={image}
               width={500}
               height={500}
+              priority
               className="w-full h-full object-cover aspect-auto"
             />
           </div>
