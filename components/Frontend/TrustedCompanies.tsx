@@ -1,38 +1,9 @@
 import Image from "next/image";
+import { companiesList } from "@/constants/trustedcompanies";
 
-interface Companies {
-  id: number;
-  url: string;
-}
-
-const companiesList: Companies[] = [
-  {
-    id: 1,
-    url: "/assets/trustedPartners/trustedPartner-1.png",
-  },
-  {
-    id: 2,
-    url: "/assets/trustedPartners/trustedPartner-2.png",
-  },
-
-  {
-    id: 3,
-    url: "/assets/trustedPartners/trustedPartner-3.png",
-  },
-  {
-    id: 4,
-    url: "/assets/trustedPartners/trustedPartner-4.png",
-  },
-
-  {
-    id: 5,
-    url: "/assets/trustedPartners/trustedPartner-5.png",
-  },
-];
-
-const TrustedCompanies = () => {
+const TrustedCompanies: React.FC = () => {
   return (
-    <section className="bg-slate-200 py-14 dark:bg-dark">
+    <section className="py-14 antialiased bg-slate-200">
       <div className="container mx-auto">
         <h1 className="text-center pb-10 text-2xl md:text-3xl xl:text-4xl font-bold text-[#251540]">
           EnterpriseTrust Partners
