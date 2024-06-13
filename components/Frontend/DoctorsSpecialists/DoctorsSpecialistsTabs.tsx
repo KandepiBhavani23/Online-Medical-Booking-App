@@ -1,6 +1,6 @@
 import React from "react";
 import TabItems from "./TabItems";
-import SectionHeading from "../SectionHeading";
+import SectionHeading from "../../ui/SectionHeading";
 
 const DoctorsSpecialistsTabs = () => {
   return (
