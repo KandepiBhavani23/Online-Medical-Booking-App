@@ -12,24 +12,25 @@ export default function CategoryCarousel({
 }) {
   const responsive = {
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 3000, min: 1100 },
       items: 3,
       slidesToSlide: 3, // optional, default to 1.
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 3,
+      breakpoint: { max: 1024, min: 746 },
+      items: 2,
       slidesToSlide: 2, // optional, default to 1.
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 2,
+      breakpoint: { max: 745, min: 0 },
+      items: 1,
       slidesToSlide: 1, // optional, default to 1.
     },
   };
   return (
     <Carousel
-      swipeable={false}
+      swipeable={true}
+      showDots={true}
       draggable={false}
       responsive={responsive}
       ssr={true} // means to render carousel on server-side.
@@ -43,7 +44,7 @@ export default function CategoryCarousel({
       removeArrowOnDeviceType={["tablet", "mobile"]}
       // deviceType={}
       dotListClass="custom-dot-list-style"
-      itemClass="px-4">
+      itemClass="px-4 py-8">
       {doctor.map((doctor: any) => {
         return <DoctorCard key={doctor.id} isInPerson={isInPerson} />;
       })}

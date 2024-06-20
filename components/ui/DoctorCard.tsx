@@ -16,8 +16,8 @@ const times = [
 
 const DoctorCard = ({ isInPerson = false }: { isInPerson?: boolean }) => {
   return (
-    <div className="border border-gray-200 rounded-lg p-6 min-h-full max-w-sm shadow-lg bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
-      <Link href="#">
+    <div className="border border-gray-200 grid grid-cols-1 rounded-lg p-6 min-h-full shadow-lg bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+      <Link href="/doctors/slug">
         <h2 className="text-xl font-semibold text-gray-800">
           Dr. Matthew Pabis, MD
         </h2>
@@ -88,7 +88,7 @@ const DoctorCard = ({ isInPerson = false }: { isInPerson?: boolean }) => {
             </Link>
           ))}
           <Link
-            href="#"
+            href="/doctors/slug"
             className="bg-[#f7f4fd] font-semibold text-[#8359db] py-2 px-3 flex items-center justify-center duration-200 h-[34px] min-w-[88px] text-[13px] ease-in-out">
             See More
           </Link>
